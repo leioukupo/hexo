@@ -3,8 +3,8 @@ name: Hexo Deploy
 on:
   push:
     branches:
-      - master
-      
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-18.04
@@ -34,7 +34,6 @@ jobs:
           git config --global user.name "leioukupo"
           npm install hexo-cli -g
           npm install
-
       - name: Deploy
         run: |
           hexo clean
