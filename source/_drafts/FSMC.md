@@ -13,3 +13,5 @@ updated: '2023-12-10T16:13:19.978+08:00'
 > 能够与同步或异步存储器和16位PC存储器卡连接，[STM32](https://so.csdn.net/so/search?q=STM32&spm=1001.2101.3001.7020)的FSMC接口支持包括 `SRAM`、`NANDFLASH`、`NORFLASH`和 `PSRAM`等存储器
 
 ![fsmc框图](https://github.com/leioukupo/img/blob/main/fsmc.png)
+
+fsmc驱动LCD的原理------->把TFTLCD当成一个SRAM来用，有两个地址的SRAM
