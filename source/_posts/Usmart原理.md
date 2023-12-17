@@ -6,7 +6,7 @@ date: '2023-12-11T21:51:53.568128+08:00'
 tags:
 - STM32
 title: Usmart
-updated: '2023-12-17T23:04:48.001+08:00'
+updated: '2023-12-17T23:10:11.094+08:00'
 ---
 # Usamrt流程
 
@@ -256,9 +256,9 @@ u8 usmart_search_nextc(u8 *str)
 > 然后从0到usmart_dev.fnum(结构体里函数数量值)开始循环, strcmp逐个比较接收的函数名字和本地存储的函数名字
 > 情况1. 如果找到一样的，判断收到的函数参数是不是和存储的函数参数个数相等
 > 情况1.1 收到的小于存储的就返回错误**USMART_PARMERR**, 记下函数id, 跳出循环
->   情况1.2 收到的大于存储的,     xxxxxxxxxxx
->   情况1.3 收到的等于存储的, 用usmart_get_fparam获得函数参数个数并赋值给usmart_dev.pnum
->   情况3. 如果i循环到等于usmart_dev.fnum, 也就是全部找完了, 没有发现符合的函数名字,也返回一个错误**USMART_NOFUNCFIND**
+> 情况1.2 收到的大于存储的,     xxxxxxxxxxx
+> 情况1.3 收到的等于存储的, 用usmart_get_fparam获得函数参数个数并赋值给usmart_dev.pnum
+> 情况3. 如果i循环到等于usmart_dev.fnum, 也就是全部找完了, 没有发现符合的函数名字,也返回一个错误**USMART_NOFUNCFIND**
 > 都判断完,找到了且参数个数也一样就返回**USMART_OK**
 
 ```c
