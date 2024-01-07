@@ -50,5 +50,43 @@ RTC_SetTime ()
 RTC_SetDate()
 ```
 
+## 闹钟配置流程
+
+1. 初始化RTC相关参数
+
+2. 关闭闹钟
+
+```c
+RTC_AlarmCmd(RTC_Alarm_A,DISABLE)
+```
+
+3. 配置闹钟参数
+
+```c
+RTC_SetAlarm()
+```
+
+4. 开启闹钟
+
+```c
+RTC_AlarmCmd(RTC_Alarm_A,EABLE)
+```
+
+5. 开启配置闹钟中断
+
+```c
+RTC_ITConfig()
+EXTI_Init()
+NVIC_Init()
+```
+
+6. 编写中断服务函数
+
+```c
+RTC_Alarm_IRQHandler()
+```
+
+
+
 
 
