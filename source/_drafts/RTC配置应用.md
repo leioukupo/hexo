@@ -38,6 +38,7 @@ RCC_RTCCLKCmd()
 ```c
 RTC_Init ()
 ```
+
 5. 设置时间
 
 ```c
@@ -53,7 +54,6 @@ RTC_SetDate()
 ## 闹钟配置流程
 
 1. 初始化RTC相关参数
-
 2. 关闭闹钟
 
 ```c
@@ -86,7 +86,43 @@ NVIC_Init()
 RTC_Alarm_IRQHandler()
 ```
 
+## RTC周期性自动唤醒配置流程
 
+1. 初始化RTC相关参数
+2. 关闭WakeUp
 
+```c
+RTC_WakeUpCmd(DISABLE)
+```
 
+3. 配置WakeUp时钟分频系数/来源
 
+```c
+RTC_WakeUpClockConfig()
+```
+
+4. 设置WakeUp自动装载寄存器
+
+```c
+RTC_SetWakeUpCounter()
+```
+
+5. 使能WakeUp
+
+```c
+RTC_WakeUpCmd( ENABLE);
+```
+
+6. 开启配置闹钟中断
+
+```c
+RTC_ITConfig()
+EXTI_Init()
+NVIC_Init()
+```
+
+7. 编写中断服务函数
+
+```c
+RTC_WKUP_IRQHandler();
+```
