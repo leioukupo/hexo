@@ -1,5 +1,5 @@
 ---
-abbrlink: ''
+abbrlink: FSMC
 categories:
 - - 单片机
 date: '2023-12-10T15:43:59.244423+08:00'
