@@ -10,6 +10,12 @@ keywords:
 author: leioukupo
 language: zh-CN
 timezone: 'Asia/Shanghai'
+# 标签页图标
+favicon:
+  small: /themes/small.ico
+  #medium: /images/favicon-32x32-next.png
+  medium: /themes/medium.ico
+
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
