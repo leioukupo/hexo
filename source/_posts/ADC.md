@@ -6,13 +6,13 @@ date: '2024-04-14T15:35:43.254787+08:00'
 tags:
 - STM32
 title: ADC使用
-updated: '2024-04-14T16:13:41.408+08:00'
+updated: '2024-04-14T16:15:04.186+08:00'
 ---
 # stm32的ADC单通道单次使用
 
 ## ADC通道与引脚对应关系
 
-![https://github.com/username/repo/raw/main/Qexo/24/4/image_d766dd94b450b38b8d81a2db02a4d03c.png](https://github.com/username/repo/raw/master/Qexo/24/4/image_d766dd94b450b38b8d81a2db02a4d03c.png)
+![https://github.com/username/repo/blob/main/Qexo/24/4/image_d766dd94b450b38b8d81a2db02a4d03c.png](https://github.com/username/repo/raw/master/Qexo/24/4/image_d766dd94b450b38b8d81a2db02a4d03c.png)
 **stm32f1没有内部温度传感器**
 
 ## 单次ADC采集流程
@@ -69,3 +69,4 @@ ADC_SoftwareStartConvCmd(ADC1,ENABLE); // 软件触发转换
 ```cpp
 ADC_GetConversionValue(ADC1);
 ```
+
