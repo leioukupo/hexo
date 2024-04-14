@@ -12,7 +12,7 @@ updated: '2024-04-14T16:36:37.885+08:00'
 
 ## ADC通道与引脚对应关系
 
-![adc通道](https://github.com/leioukupo/img/raw/main/Qexo/24/4/image_d766dd94b450b38b8d81a2db02a4d03c.png)
+![adc通道与对应的引脚](https://github.com/leioukupo/img/raw/main/Qexo/24/4/image_d766dd94b450b38b8d81a2db02a4d03c.png)
 **stm32f1没有内部温度传感器**
 
 ## 单次ADC采集流程
