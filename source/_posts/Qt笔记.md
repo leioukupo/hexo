@@ -1,12 +1,13 @@
 ---
 abbrlink: ''
-categories: []
+categories:
+- - Qt
 date: '2024-07-04T21:31:38.696432+08:00'
 tags:
 - Qt
 - C++
 title: Qt笔记
-updated: '2024-07-04T21:47:27.012+08:00'
+updated: '2024-07-04T22:39:11.606+08:00'
 ---
 # Qt笔记
 
