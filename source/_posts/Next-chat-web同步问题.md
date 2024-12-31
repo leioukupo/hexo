@@ -1,10 +1,12 @@
 ---
 abbrlink: ''
-categories: []
+categories:
+- - openai
 date: '2024-12-31T18:11:58.863512+08:00'
-tags: []
-title: title
-updated: '2024-12-31T18:12:02.962+08:00'
+tags:
+- openai
+title: Next-chat-web同步
+updated: '2024-12-31T18:20:14.554+08:00'
 ---
 1. 修改docker的环境变量
 
