@@ -2,9 +2,10 @@
 abbrlink: ''
 categories: []
 date: '2025-04-01T19:48:10.348923+08:00'
-tags: []
+tags:
+- pve
 title: 8845-all in one
-updated: '2025-04-01T20:13:52.111+08:00'
+updated: '2025-04-01T20:16:05.557+08:00'
 ---
 其他X86多网口设备均可以参考
 
