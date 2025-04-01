@@ -4,7 +4,7 @@ categories: []
 date: '2025-04-01T19:48:10.348923+08:00'
 tags: []
 title: 8845-all in one
-updated: '2025-04-01T20:09:11.140+08:00'
+updated: '2025-04-01T20:13:52.111+08:00'
 ---
 其他X86多网口设备均可以参考
 
@@ -60,9 +60,9 @@ firewall-cmd --add-interface=pve --zone=trusted --permanent
 dnf install @virtualization
 ```
 
-可以使用virt-manager以gui方式创建虚拟机、
+可以使用virt-manager以gui方式创建虚拟机
 
-> **网络源选桥接设备     设备名称填网桥名称**
+**网络源选桥接设备      设备名称填网桥名称**
 
 ## 第三步
 
