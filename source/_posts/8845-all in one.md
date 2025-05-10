@@ -5,7 +5,7 @@ date: '2025-04-01T19:48:10.348923+08:00'
 tags:
 - pve
 title: 8845-all in one
-updated: '2025-04-01T20:16:05.557+08:00'
+updated: '2025-05-10T20:08:34.218+08:00'
 ---
 其他X86多网口设备均可以参考
 
@@ -86,3 +86,9 @@ scsi2: /dev/sda,cache=directsync,discard=on,iothread=1
 至此，all in one完成，后续需要加服务，不需要gpu添加到虚拟机PVE
 
 需要GPU的直接添加到宿主机，把宿主机服务的部署整理成脚本，重置后一键恢复服务
+
+GPU失败是因为驱动问题
+
+解决驱动问题
+
+[卸载vfio](https://blog.akkia.moe/note/PVE%EF%BC%9A%E6%97%A0%E9%9C%80%E9%87%8D%E5%90%AF%EF%BC%8C%E8%A7%A3%E5%86%B3%E7%A7%BB%E9%99%A4PCIE%E7%9B%B4%E9%80%9A%E5%90%8E%E6%89%BE%E4%B8%8D%E5%88%B0%E7%A1%AC%E7%9B%98%E7%9A%84%E9%97%AE%E9%A2%98)
