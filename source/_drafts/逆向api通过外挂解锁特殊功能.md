@@ -162,5 +162,85 @@ fc(function call简称)或者Mcp说通俗点就是，llm根据tools参数和上�
 no
 ```
 
+## 代码逻辑
+
+```python
+tools_use = False
+tools_answer = 'no'
+
+tools_question = str(tools_json) + messages[-1]["content"] # 缓存用户问题
+
+tools_json = data.get("tools", None) #提取tools参数
+# 首先用tools_json和question以及提示词进行新的对话判断是否需要工具
+# 需要的话返回的是结构化的调用参数，不需要就返回的no
+# 这轮新的对话可以使用2api的模型也可以使用正规的官方api
+
+# 只有tools_answer不是no且tools_use是false时才说需要mcp或者fc且之前没有进行过工具的调用
+if tools_answer != 'no' and not tools_use:
+    # 需要function call
+    # 构造openai api格式的返回
+    # 生成created
+    current_timestamp = int(time.time())
+    created = current_timestamp
+    # 下面是告诉客户端需要调用mcp的返回值模板,看了L站n多关于mcp的帖子才知道
+    completion = {
+        "id": answer_id,
+        "object": "chat.completion",
+        "created": created,
+        "model": model,
+        "system_fingerprint": system_fingerprint,
+        "choices": [{
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "tool_calls": json.loads(tools_answer) if tools_answer else None,
+                "content": None, # 如果有提示词能达到claude使用MCP的思考过程的效果，可以把模拟的思考过程赋值到此处
+            },
+            "logprobs": None,
+            "finish_reason": "tool_call"
+        }],
+        "usage": {
+            "prompt_tokens": prompt_tokens,
+            "completion_tokens": completion_tokens,
+            "total_tokens": total_tokens
+        }
+    }
+    tools_answer = 'no'  # 重置相关参数，便于下次正确使用
+
+
+
+# 判断上下文最后的messages的role角色，如果是tools，说明这是客户端发回来的mcp或者fc调用的结果
+elif messages[-1]["role"] == 'tool':
+
+#需要从头到位遍历messages，把tool的role转成user，这样逆向的api才好使用
+# tools的结果在content里的第一个的text里面
+messages[-1]["content"][0]["text"]
+
+
+# 同时判断tools_use是不是true,  是说明这就是本次tools的调用结果
+if tools_use:
+        # 这里需要保证对话的最后一条是用户起初提的问题，不同的逆向api这里的代码不一样比如
+        chat_messages["content"] = question
+        question = None# 恢复变量和标志位
+        tools_use = False
+```
+
+## MCP的思考过程
+
+我也写了一个粗略的提示词想要达成这种效果，但由于我的提示词功力不够以及逆向的模型过于垃圾，导致效果不理想
+
+
+## end
+
+这样做了以后就可以让逆向api支持mcp协议了
+经过openwebui几个简单的工具测试可以达成效果
+
+
+
+
+
+
+
+
 
 
