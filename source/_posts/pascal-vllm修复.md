@@ -5,7 +5,7 @@ date: '2025-10-20T21:05:19.753540+08:00'
 tags:
 - vllm
 title: Pascal-vllm报错
-updated: '2025-10-20T21:05:21.363+08:00'
+updated: '2025-10-20T21:13:49.284+08:00'
 ---
 Pascal-vllm原版镜像报错aimv2被占用
 
@@ -58,3 +58,7 @@ services:
             - ./cache/huggingface:/root/.cache/huggingface
             -  /path/to/ovis.py://usr/local/lib/python3.12/dist-packages/vllm/transformers_utils/configs/ovis.py
 ```
+
+关于`An error occurred while downloading using `hf_transfer`. Consider disabling HF_HUB_ENABLE_HF_TRANSFER for better error handling.`
+
+设置换觉变量HF\_HUB\_ENABLE\_HF\_TRANSFER=0即可
