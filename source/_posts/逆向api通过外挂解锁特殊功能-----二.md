@@ -3,8 +3,8 @@ abbrlink: ''
 categories: []
 date: '2026-03-07T16:30:18.239567+08:00'
 tags: []
-title: title
-updated: '2026-03-07T16:30:41.760+08:00'
+title: ' 逆向api通过外挂解锁特殊功能-----二'
+updated: '2026-03-07T17:11:16.958+08:00'
 ---
 之前的文章 [逆向api通过外挂解锁特殊功能 | leioukupo的博客](https://blog.leioukupo.top/2025/06/08/%E9%80%86%E5%90%91api%E9%80%9A%E8%BF%87%E5%A4%96%E6%8C%82%E8%A7%A3%E9%94%81%E7%89%B9%E6%AE%8A%E5%8A%9F%E8%83%BD/)
 直接构建一个带tool\_calls的completion发送没太大问题，但是不能流式
