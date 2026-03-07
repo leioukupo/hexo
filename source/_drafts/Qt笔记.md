@@ -7,7 +7,7 @@ tags:
 - Qt
 - C++
 title: Qt笔记
-updated: '2025-11-14T20:10:00.867+08:00'
+updated: '2026-03-07T13:10:22.282+08:00'
 ---
 # Qt笔记
 
@@ -64,3 +64,5 @@ connect(ui->comboBox, QOverload<const QString&>::of(&QComboBox::currentIndexChan
 > 半选中 1
 >
 > 选中 2
+
+![](http://149.88.87.199:22812/my-bucket/Qexo/26/3/d9c3eb37def9968497e83962382bc3dd.png)
