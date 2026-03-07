@@ -1,10 +1,12 @@
 ---
 abbrlink: ''
-categories: []
+categories:
+- - Pve
 date: '2026-03-07T16:33:13.616781+08:00'
-tags: []
-title: title
-updated: '2026-03-07T16:33:24.725+08:00'
+tags:
+- Pve
+title: Pve虚拟铭凡nas os
+updated: '2026-03-07T17:15:17.054+08:00'
 ---
 # 第一步，获取序列号
 
