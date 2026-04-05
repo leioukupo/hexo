@@ -6,7 +6,7 @@ date: '2026-03-07T16:33:13.616781+08:00'
 tags:
 - Pve
 title: Pve虚拟铭凡nas os
-updated: '2026-03-07T17:15:17.054+08:00'
+updated: '2026-04-05T18:26:49.556+08:00'
 ---
 # 第一步，获取序列号
 
@@ -72,6 +72,8 @@ xxx是虚拟机号，比如我的是106，那就是./img2kvm nasos-2.1.10.0002.i
 ## 其他问题
 
 如果创建存储池一直错误，就把原来创建的硬盘分离并移除，然后重新建一块硬盘
+
+因为硬盘太小，把硬盘扩大一点
 
 [铭凡nas os]([https://www.minisforum.cn/pages/product-info](https://www.minisforum.cn/pages/product-info))
 
